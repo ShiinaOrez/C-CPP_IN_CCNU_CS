@@ -1,0 +1,1 @@
+/usr/bin/c++  -g   CMakeFiles/11_21.dir/myfilecopy.cpp.o  -o 11_21 

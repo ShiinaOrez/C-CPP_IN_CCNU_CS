@@ -1,0 +1,16 @@
+/home/song-ruyang/下载/clion-2018.2.6/bin/cmake/linux/bin/cmake -DCMAKE_BUILD_TYPE=Debug -G "CodeBlocks - Unix Makefiles" /home/song-ruyang/c_and_cpp/11_21
+-- Configuring done
+CMake Error at CMakeLists.txt:6 (add_executable):
+  Cannot find source file:
+
+    myfilecopy.cpp
+
+  Tried extensions .c .C .c++ .cc .cpp .cxx .cu .m .M .mm .h .hh .h++ .hm
+  .hpp .hxx .in .txx
+
+
+CMake Error at CMakeLists.txt:6 (add_executable):
+  No SOURCES given to target: 11_21
+
+
+-- Build files have been written to: /home/song-ruyang/c_and_cpp/11_21/cmake-build-debug
