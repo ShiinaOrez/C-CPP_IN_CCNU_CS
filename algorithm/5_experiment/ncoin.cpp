@@ -119,7 +119,7 @@ void judge(vector<int> array) {
 }
 
 int main() {
-    vector<int> array = {1, 1, 2, 1, 1, 1,1,1,1,1,1,1,1, 1, 1};
+    vector<int> array = {1, 1, 2, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1};
     judge(array);
     return 0;
 }
