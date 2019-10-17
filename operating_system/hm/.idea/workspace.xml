@@ -9,7 +9,7 @@
     </configurations>
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="00fde587-4d51-44bb-86b7-03a8ffd923b7" name="Default Changelist" comment="" />
+    <list default="true" id="12941786-9778-4de8-9333-a8ef7b5bbb7d" name="Default Changelist" comment="" />
     <option name="EXCLUDED_CONVERTED_TO_IGNORED" value="true" />
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -17,49 +17,53 @@
     <option name="LAST_RESOLUTION" value="IGNORE" />
   </component>
   <component name="FUSProjectUsageTrigger">
-    <session id="764081503">
+    <session id="-1803741262">
       <usages-collector id="statistics.lifecycle.project">
         <counts>
-          <entry key="project.closed" value="4" />
+          <entry key="project.closed" value="3" />
           <entry key="project.open.time.1" value="1" />
-          <entry key="project.open.time.10" value="1" />
-          <entry key="project.open.time.21" value="1" />
-          <entry key="project.open.time.4" value="1" />
-          <entry key="project.opened" value="4" />
+          <entry key="project.open.time.16" value="2" />
+          <entry key="project.opened" value="3" />
         </counts>
       </usages-collector>
       <usages-collector id="statistics.file.extensions.open">
         <counts>
-          <entry key="cpp" value="1" />
-          <entry key="myppt" value="2" />
-          <entry key="new" value="1" />
+          <entry key="cpp" value="2" />
         </counts>
       </usages-collector>
       <usages-collector id="statistics.file.types.open">
         <counts>
-          <entry key="ObjectiveC" value="1" />
-          <entry key="PLAIN_TEXT" value="3" />
+          <entry key="ObjectiveC" value="2" />
         </counts>
       </usages-collector>
       <usages-collector id="statistics.file.extensions.edit">
         <counts>
-          <entry key="cpp" value="11483" />
+          <entry key="cpp" value="8634" />
         </counts>
       </usages-collector>
       <usages-collector id="statistics.file.types.edit">
         <counts>
-          <entry key="ObjectiveC" value="11483" />
+          <entry key="ObjectiveC" value="8634" />
         </counts>
       </usages-collector>
     </session>
   </component>
   <component name="FileEditorManager">
     <leaf SIDE_TABS_SIZE_LIMIT_KEY="375">
-      <file pinned="false" current-in-tab="true">
-        <entry file="file://$PROJECT_DIR$/main.cpp">
+      <file pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/hm1.cpp">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="120">
-              <caret line="313" selection-start-line="313" selection-end-line="316" />
+            <state relative-caret-position="-4037">
+              <caret line="74" selection-start-line="74" selection-end-line="81" selection-end-column="1" />
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file pinned="false" current-in-tab="true">
+        <entry file="file://$PROJECT_DIR$/hm2.cpp">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="500">
+              <caret line="75" column="20" lean-forward="true" selection-start-line="75" selection-start-column="20" selection-end-line="75" selection-end-column="20" />
             </state>
           </provider>
         </entry>
@@ -68,17 +72,14 @@
   </component>
   <component name="FindInProjectRecents">
     <findStrings>
-      <find>Get</find>
-      <find>Set</find>
+      <find>now_</find>
     </findStrings>
-  </component>
-  <component name="Git.Settings">
-    <option name="RECENT_GIT_ROOT_PATH" value="$PROJECT_DIR$/.." />
   </component>
   <component name="IdeDocumentHistory">
     <option name="CHANGED_PATHS">
       <list>
-        <option value="$PROJECT_DIR$/main.cpp" />
+        <option value="$PROJECT_DIR$/hm1.cpp" />
+        <option value="$PROJECT_DIR$/hm2.cpp" />
       </list>
     </option>
   </component>
@@ -89,12 +90,10 @@
     <sorting>DEFINITION_ORDER</sorting>
   </component>
   <component name="ProjectFrameBounds" extendedState="6">
-    <option name="x" value="960" />
     <option name="y" value="27" />
     <option name="width" value="960" />
     <option name="height" value="1053" />
   </component>
-  <component name="ProjectLevelVcsManager" settingsEditedManually="true" />
   <component name="ProjectView">
     <navigator proportions="" version="1">
       <foldersAlwaysOnTop value="true" />
@@ -105,8 +104,8 @@
         <subPane>
           <expand>
             <path>
-              <item name="c_plus_plus_homework" type="b2602c69:ProjectViewProjectNode" />
-              <item name="c_plus_plus_homework" type="462c0819:PsiDirectoryNode" />
+              <item name="hm" type="b2602c69:ProjectViewProjectNode" />
+              <item name="hm" type="462c0819:PsiDirectoryNode" />
             </path>
           </expand>
           <select />
@@ -116,10 +115,9 @@
   </component>
   <component name="PropertiesComponent">
     <property name="WebServerToolWindowFactoryState" value="false" />
-    <property name="last_opened_file_path" value="$USER_HOME$/operatingSystem/hm" />
+    <property name="last_opened_file_path" value="$PROJECT_DIR$" />
     <property name="nodejs_interpreter_path.stuck_in_default_project" value="undefined stuck path" />
     <property name="nodejs_npm_path_reset_for_default_project" value="true" />
-    <property name="settings.editor.selected.configurable" value="preferences.lookFeel" />
   </component>
   <component name="RunDashboard">
     <option name="ruleStates">
@@ -133,35 +131,30 @@
       </list>
     </option>
   </component>
-  <component name="RunManager">
-    <configuration name="Unnamed" type="CLion_Remote" factoryName="GDB Remote Debug" remoteCommand="" symbolFile="" sysroot="">
-      <method v="2" />
-    </configuration>
-  </component>
   <component name="SvnConfiguration">
     <configuration />
   </component>
   <component name="TaskManager">
     <task active="true" id="Default" summary="Default task">
-      <changelist id="00fde587-4d51-44bb-86b7-03a8ffd923b7" name="Default Changelist" comment="" />
-      <created>1558889373458</created>
+      <changelist id="12941786-9778-4de8-9333-a8ef7b5bbb7d" name="Default Changelist" comment="" />
+      <created>1569221954582</created>
       <option name="number" value="Default" />
       <option name="presentableId" value="Default" />
-      <updated>1558889373458</updated>
-      <workItem from="1558889374757" duration="880000" />
-      <workItem from="1558934837684" duration="31792000" />
-      <workItem from="1558977791985" duration="1178000" />
-      <workItem from="1569221913785" duration="37000" />
+      <updated>1569221954582</updated>
+      <workItem from="1569221955950" duration="14281000" />
+      <workItem from="1569380945240" duration="613000" />
+      <workItem from="1571032527925" duration="8441000" />
     </task>
     <servers />
   </component>
   <component name="TimeTrackingManager">
-    <option name="totallyTimeSpent" value="33887000" />
+    <option name="totallyTimeSpent" value="23335000" />
   </component>
   <component name="ToolWindowManager">
     <frame x="0" y="27" width="1920" height="1053" extended-state="6" />
+    <editor active="true" />
     <layout>
-      <window_info content_ui="combo" id="Project" order="0" visible="true" weight="0.11866235" />
+      <window_info content_ui="combo" id="Project" order="0" visible="true" weight="0.070658036" />
       <window_info id="Structure" order="1" side_tool="true" weight="0.25" />
       <window_info id="Favorites" order="2" side_tool="true" />
       <window_info anchor="bottom" id="Message" order="0" />
@@ -173,8 +166,8 @@
       <window_info anchor="bottom" id="TODO" order="6" />
       <window_info anchor="bottom" id="Database Changes" order="7" show_stripe_button="false" />
       <window_info anchor="bottom" id="Version Control" order="8" show_stripe_button="false" />
-      <window_info active="true" anchor="bottom" id="Terminal" order="9" sideWeight="0.7481122" visible="true" weight="0.28980526" />
-      <window_info anchor="bottom" id="Event Log" order="10" sideWeight="0.2518878" side_tool="true" visible="true" weight="0.28980526" />
+      <window_info active="true" anchor="bottom" id="Terminal" order="9" visible="true" weight="0.20227273" />
+      <window_info anchor="bottom" id="Event Log" order="10" side_tool="true" />
       <window_info anchor="right" id="Commander" internal_type="SLIDING" order="0" type="SLIDING" weight="0.4" />
       <window_info anchor="right" id="Ant Build" order="1" weight="0.25" />
       <window_info anchor="right" content_ui="combo" id="Hierarchy" order="2" weight="0.25" />
@@ -188,12 +181,17 @@
     <option name="myLimit" value="2678400000" />
   </component>
   <component name="editorHistoryManager">
-    <entry file="file://$PROJECT_DIR$/undefined.myppt" />
-    <entry file="file://$PROJECT_DIR$/new" />
-    <entry file="file://$PROJECT_DIR$/main.cpp">
+    <entry file="file://$PROJECT_DIR$/hm1.cpp">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="120">
-          <caret line="313" selection-start-line="313" selection-end-line="316" />
+        <state relative-caret-position="-4037">
+          <caret line="74" selection-start-line="74" selection-end-line="81" selection-end-column="1" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/hm2.cpp">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="500">
+          <caret line="75" column="20" lean-forward="true" selection-start-line="75" selection-start-column="20" selection-end-line="75" selection-end-column="20" />
         </state>
       </provider>
     </entry>
