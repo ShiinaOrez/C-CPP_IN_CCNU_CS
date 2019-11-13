@@ -151,7 +151,7 @@ vector<Process> rr() {
     cout << "      ╭─────────────┬────────┬──────────╮" << endl;
     cout << "      │ WaitingTime │ Totoal │ Averange │" << endl;
     cout << "      ├─────────────┼────────┼──────────┤" << endl;
-    printf ("      │        (ms) │  %4d  │  %6.3f  │\n", waiting_tot, float(waiting_tot)/float(process_count));
+    printf ("      │        (ms) │  %4d  │  %6.3f │\n", waiting_tot, float(waiting_tot)/float(process_count));
     cout << "      ╰─────────────┴────────┴──────────╯" << endl;
     return processes;
 }
