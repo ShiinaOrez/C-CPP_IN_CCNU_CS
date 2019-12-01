@@ -21,15 +21,23 @@ struct partition_t {
 	int id;
 	string start_address;
 	int space;
+	int offset;
 };
 
 struct request {
 	int size;
 };
 
+struct allocation {
+	string start_address;
+	int offset;
+	int r_id;
+	int size;
+};
+
 struct result {
 	int statu;
-	vector<string> addresses;
+	vector<allocation> allocations;
 };
 
 bool comp_address(const partition_t &p1, const partition_t &p2) {
@@ -47,13 +55,15 @@ bool comp_space_reverse(const partition_t &p1, const partition_t &p2) {
 result first_fit(vector<partition_t> p_list, vector<request> r_list) {
 	result res{1};
 	sort(p_list.begin(), p_list.end(), comp_address);
-
+	int r_id = -1;
 	for (auto r=r_list.begin(); r != r_list.end(); r++) {
 		bool found = false;
+		r_id += 1;
 		for (auto p=p_list.begin(); p != p_list.end(); p++) {
 			if ((*p).space >= (*r).size) {
 				p->space -= r->size;
-				res.addresses.push_back(p->start_address);
+				res.allocations.push_back(allocation{p->start_address, p->offset, r_id, r->size});
+				p->offset += r->size;
 				found = true;
 				break;
 			}
@@ -63,19 +73,29 @@ result first_fit(vector<partition_t> p_list, vector<request> r_list) {
 			return res;
 		}
 	}
+	if (res.statu != -1) {
+		cout << "==>  space list:" << endl;
+		for (auto p=p_list.begin(); p != p_list.end(); p++) {
+			if (p->space > 0) {
+				cout << "   ==>  " << p->start_address << "[" << p->offset << "-" << p->offset+p->space << "]" << " size: " << p->space << endl;
+			}
+		}
+	}
 	return res;
 }
 
 result best_fit(vector<partition_t> p_list, vector<request> r_list) {
 	result res{1};
 	sort(p_list.begin(), p_list.end(), comp_space);
-
+	int r_id = -1;
 	for (auto r=r_list.begin(); r != r_list.end(); r++) {
 		bool found = false;
+		r_id += 1;
 		for (auto p=p_list.begin(); p != p_list.end(); p++) {
 			if ((*p).space >= (*r).size) {
 				p->space -= r->size;
-				res.addresses.push_back((*p).start_address);
+				res.allocations.push_back(allocation{p->start_address, p->offset, r_id, r->size});
+				p->offset += r->size;
 				found = true;
 				break;
 			}
@@ -86,19 +106,29 @@ result best_fit(vector<partition_t> p_list, vector<request> r_list) {
 		}
 		sort(p_list.begin(), p_list.end(), comp_space);
 	}
+	if (res.statu != -1) {
+		cout << "==>  space list:" << endl;
+		for (auto p=p_list.begin(); p != p_list.end(); p++) {
+			if (p->space > 0) {
+				cout << "   ==>  " << p->start_address << "[" << p->offset << "-" << p->offset+p->space << "]" << " size: " << p->space << endl;
+			}
+		}
+	}	
 	return res;
 }
 
 result worst_fit(vector<partition_t> p_list, vector<request> r_list) {
 	result res{1};
 	sort(p_list.begin(), p_list.end(), comp_space_reverse);
-
+	int r_id = -1;
 	for (auto r=r_list.begin(); r != r_list.end(); r++) {
 		bool found = false;
+		r_id += 1;
 		for (auto p=p_list.begin(); p != p_list.end(); p++) {
 			if ((*p).space >= (*r).size) {
 				p->space -= r->size;
-				res.addresses.push_back((*p).start_address);
+				res.allocations.push_back(allocation{p->start_address, p->offset, r_id, r->size});
+				p->offset += r->size;
 				found = true;
 				break;
 			}
@@ -109,6 +139,14 @@ result worst_fit(vector<partition_t> p_list, vector<request> r_list) {
 		}
 		sort(p_list.begin(), p_list.end(), comp_space_reverse);
 	}
+	if (res.statu != -1) {
+		cout << "==>  space list:" << endl;
+		for (auto p=p_list.begin(); p != p_list.end(); p++) {
+			if (p->space > 0) {
+				cout << "   ==>  " << p->start_address << "[" << p->offset << "-" << p->offset+p->space << "]" << " size: " << p->space << endl;
+			}
+		}
+	}
 	return res;
 }
 
@@ -117,11 +155,13 @@ void print_result(result res) {
 		cout << "==>  allocation success" << endl;
 	} else {
 		cout << "==>  allocation failed" << endl;
+		return ;
 	}
-	cout << "==>  " << endl;
-	int length = res.addresses.size();
-	for (int i=0; i<length; i++)
-		cout << "     " << res.addresses[i] << endl;
+	int length = res.allocations.size();
+	cout << "==>  allocation information:" << endl;
+	for (int i=0; i<length; i++) {
+		cout << "   ==>  " << res.allocations[i].start_address << "+" << res.allocations[i].offset << " to " << res.allocations[i].r_id << endl;
+	}
 	return ;
 }
 
@@ -140,7 +180,7 @@ int main() {
     	string start_address;
     	int space;
     	cin >> start_address >> space;
-    	partition_t new_partition_t = partition_t{id_cache, start_address, space};
+    	partition_t new_partition_t = partition_t{id_cache, start_address, space, 0};
     	partition_t_list.push_back(new_partition_t);
     	cin >> id_cache;
     }
@@ -183,10 +223,13 @@ int main() {
     		break;
     	}
     	case 4: {
+    		cout << endl << "using ff:" << endl;
     		result res = first_fit(partition_t_list, request_list);
     		print_result(res);
+    		cout << endl << "using bf:" << endl;
     		res = best_fit(partition_t_list, request_list);
     		print_result(res);
+    		cout << endl << "using wf" << endl;
     		res = worst_fit(partition_t_list, request_list);
     		print_result(res);
     		break;
